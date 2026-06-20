@@ -8,6 +8,10 @@ from src.feature_pipeline import (
     run_feature_pipeline
 )
 
+from src.model_pipeline import (
+    run_model_pipeline
+)
+
 
 def run_pipeline(file_path):
 
@@ -19,4 +23,6 @@ def run_pipeline(file_path):
 
     df = run_feature_pipeline(df)
 
-    return df
+    results = run_model_pipeline(df)
+
+    return results

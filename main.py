@@ -5,13 +5,19 @@ from src.pipeline import (
 
 def main():
 
-    df = run_pipeline(
+    results = run_pipeline(
         "data/electricity_demand.csv"
     )
 
-    print(df.head())
+    print("\nModel Metrics")
 
-    print(df.shape)
+    for metric, value in results[
+        "metrics"
+    ].items():
+
+        print(
+            f"{metric}: {value:.4f}"
+        )
 
 
 if __name__ == "__main__":
