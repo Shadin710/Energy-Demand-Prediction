@@ -92,3 +92,35 @@ python main.py
 ```
 streamlit run dashboard.py
 ```
+## 📊 Results & Visualizations
+### 📈 Actual vs Forecast
+![Forecast](reports/figures/actual_vs_forecast.png)
+### 📉 Feature Importance
+![Feature Importance](reports/figures/feature_importance.png)
+### 📊 Residual Analysis
+![Residual](reports/figures/residuals.png)
+### 📈 Demand Trend
+![Demand Trend](reports/figures/demand_trend.png)
+
+## 📏 Model Performance
+
+## 🧠 Techniques Used
+- Time-series feature engineering
+- Lag features
+- Rolling statistics
+- XGBoost regression
+- Train/test split
+- Data visualization
+## 📌 Technologies
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- XGBoost
+- Streamlit
+- Plotly
+## 👨‍💻 Author
+
+<b>Name:</b> MD Moshiur Rahman
+
+
