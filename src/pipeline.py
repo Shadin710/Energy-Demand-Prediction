@@ -1,14 +1,15 @@
 from src.data_loader import (
     load_data,
     convert_datetime,
-    sort_by_date,
-    check_missing_values
+    sort_by_date
+)
+
+from src.feature_pipeline import (
+    run_feature_pipeline
 )
 
 
-def run_data_pipeline(
-        file_path: str
-):
+def run_pipeline(file_path):
 
     df = load_data(file_path)
 
@@ -16,6 +17,6 @@ def run_data_pipeline(
 
     df = sort_by_date(df)
 
-    missing_values = check_missing_values(df)
+    df = run_feature_pipeline(df)
 
-    return df, missing_values
+    return df
