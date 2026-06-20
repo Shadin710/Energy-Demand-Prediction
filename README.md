@@ -103,7 +103,11 @@ streamlit run dashboard.py
 ![Demand Trend](reports/figures/demand_trend.png)
 
 ## 📏 Model Performance
-
+| Metric | Score |
+| :--- | :--- |
+| **MAE** | 41.66 |
+| **RMSE** | 52.19 |
+| **R²** | 0.897 |
 ## 🧠 Techniques Used
 - Time-series feature engineering
 - Lag features
@@ -123,4 +127,7 @@ streamlit run dashboard.py
 
 <b>Name:</b> MD Moshiur Rahman
 
+## 📄 License
+
+MIT License
 

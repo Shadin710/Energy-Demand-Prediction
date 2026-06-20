@@ -9,6 +9,7 @@ from src.model import (
 from src.evaluation import (
     evaluate_model
 )
+import pandas as pd
 
 
 def run_model_pipeline(df):
@@ -44,7 +45,8 @@ def run_model_pipeline(df):
         model,
         "models/xgboost_forecaster.pkl"
     )
-
+    metrics_df = pd.DataFrame([metrics])
+    metrics_df.to_csv("reports/model_metrics.csv", index=False)
     return {
         "model": model,
         "metrics": metrics,
