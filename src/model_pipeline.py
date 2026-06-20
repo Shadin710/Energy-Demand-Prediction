@@ -50,5 +50,6 @@ def run_model_pipeline(df):
         "metrics": metrics,
         "predictions": predictions,
         "y_test": y_test,
-        "X_test": X_test
+        "X_test": X_test,
+        "feature_names": X.columns
     }

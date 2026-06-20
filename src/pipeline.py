@@ -11,6 +11,9 @@ from src.feature_pipeline import (
 from src.model_pipeline import (
     run_model_pipeline
 )
+from src.report_pipeline import (
+    run_reporting_pipeline
+)
 
 
 def run_pipeline(file_path):
@@ -24,5 +27,14 @@ def run_pipeline(file_path):
     df = run_feature_pipeline(df)
 
     results = run_model_pipeline(df)
+    
+    run_reporting_pipeline(
+    df=df,
+    model=results["model"],
+    y_test=results["y_test"],
+    predictions=results["predictions"],
+    feature_names=results[
+        "feature_names"
+    ])
 
     return results
